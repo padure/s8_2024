@@ -31,13 +31,12 @@
                         <a class="nav-link active" href="#">Explore</a>
                         <a class="nav-link active" href="#">Pages</a>
                         <a class="nav-link active" href="#">Contact us</a>
-                        <a class="btn btn-connect-wallet text-white" href="#">Connect Wallet</a>
+                        <a class="btn btn-bg-light text-white" href="#">Connect Wallet</a>
                     </div>
                 </div>
             </div>
         </nav>
-
-        @yield('content')
     </div>
+    @yield('content')
 </body>
 </html>
