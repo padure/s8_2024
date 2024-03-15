@@ -1,3 +1,6 @@
+.text-site-light{
+    color: #FD1C68!important;
+}
 .btn-bg-light{
     background: linear-gradient(#FDAE8F, #FD1C68);
 }
@@ -11,9 +14,9 @@
     border-radius: 24px;
 }
 .text-site-gradient{
-    color: #FD1C68;
+    color: #FD1C68!important;
 }
-.header{
+.bg-site-image{
     height: 60dvh;
     background: url("../images/Image.png");
     background-repeat: no-repeat;
@@ -24,4 +27,7 @@
 }
 .auctionsSwiper .card{
     background: rgba(53, 57, 65, 0.41)!important;
+}
+.icons .fa-heart{
+    cursor: pointer;
 }
