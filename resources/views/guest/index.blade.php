@@ -27,15 +27,40 @@
         <div class="swiper auctionsSwiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <div class="card p-4">
+                    <div class="card btn-radius p-4">
                         <img src="{{ asset('assets/images/section_2/Saly-10.png') }}" class="card-img-top" alt="Metaverse">
                         <div class="card-body">
                             <div class="d-flex author flex-row align-items-center">
-                                <img src="{{ asset('assets/images/section_2/Avatar.png') }}" alt="Avatar" class="avatar">
+                                <img src="{{ asset('assets/images/section_2/Avatar.png') }}" alt="Avatar" class="avatar me-3">
                                 <div class="d-flex flex-column justify-content-center">
                                     <h5 class="text-white mb-0">Metaverse</h5>
-                                    <p class="text-light mb-0">Created by <span class="text-white">John Doe</span></p>
+                                    <p class="text-secondary mb-0">Created by <span class="text-white">John Doe</span></p>
                                 </div>
+                            </div>
+                            <div class="icons my-3 d-flex justify-content-around">
+                                <div class="d-flex flex-column">
+                                    <i class="fa-regular fa-heart text-white text-center"></i>
+                                    <span class="text-white">145</span>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <i class="fa-solid fa-crown text-white text-center"></i>
+                                    <span class="text-secondary"><span class="text-white">1</span>/100</span>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <i class="fa-brands fa-ethereum text-white text-center"></i>
+                                    <span class="text-secondary"><span class="text-white me-1">5.00</span>ETH</span>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <span class="btn-bg-secondary w-auto p-3 me-2 text-white rounded">
+                                    <i class="fa-solid fa-stopwatch"></i>
+                                    12d 13h 56m
+                                </span>
+
+                                <button class="btn btn-bg-light text-white p-3">
+                                    <i class="fa-solid fa-crown text-center"></i>
+                                    Place Bid
+                                </button>
                             </div>
                         </div>
                     </div>
