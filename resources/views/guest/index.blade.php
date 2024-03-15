@@ -27,12 +27,16 @@
         <div class="swiper auctionsSwiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <div class="card">
-                        <img src="{{ asset('assets/images/section_2/Saly-10.png') }}" class="card-img-top" alt="...">
+                    <div class="card p-4">
+                        <img src="{{ asset('assets/images/section_2/Saly-10.png') }}" class="card-img-top" alt="Metaverse">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <div class="d-flex author flex-row align-items-center">
+                                <img src="{{ asset('assets/images/section_2/Avatar.png') }}" alt="Avatar" class="avatar">
+                                <div class="d-flex flex-column justify-content-center">
+                                    <h5 class="text-white mb-0">Metaverse</h5>
+                                    <p class="text-light mb-0">Created by <span class="text-white">John Doe</span></p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
