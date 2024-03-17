@@ -26,7 +26,6 @@
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     </form>
-                    
                     <div class="navbar-nav">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                         <a class="nav-link active" href="#">Explore</a>
@@ -41,11 +40,13 @@
             </div>
         </nav>
     </div>
-    
+
     @yield('content')
-    
-    <footer class="mt-5 p-5 text-white d-flex align-center justify-content-center">
-        Toate drepturile rezervate
+
+    <footer class="mt-5 p-5 text-white d-flex align-center justify-content-center bg-card">
+        <p class="my-5">
+            &copy; {{ \Carbon\Carbon::now()->year }} Toate drepturile rezervate
+        </p>
     </footer>
 </body>
 </html>
