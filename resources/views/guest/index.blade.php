@@ -4,13 +4,15 @@
 <!-- Header -->
 <header>
     <div class="container d-flex align-items-center bg-site-image">
-        <div class="col-6">
-            <h1 class="text-white mb-5">
+        <div class="col-lg-6">
+            <h1 class="text-center text-lg-start text-white mb-5 header-title">
                 Discover, collect, and sell extraordinary <br>
                 <span class="text-site-gradient">NFTs</span>
             </h1>
-            <p class="text-light mb-5">NFT is the world's first and largest NFT marketplace</p>
-            <div class="buttons">
+            <p class="text-light mb-5 text-center text-lg-start header-description">
+                NFT is the world's first and largest NFT marketplace
+            </p>
+            <div class="d-flex justify-content-center justify-content-lg-start">
                 <a href="#" class="btn btn-bg-light text-white px-4 py-2 me-3">
                     <i class="fa-solid fa-rocket"></i>
                     Explore
@@ -25,8 +27,8 @@
 </header>
 <!-- End Header -->
 <!-- Auctions -->
-<section class="auctions my-5">
-    <div class="container title d-flex justify-content-between align-items-center my-5">
+<section class="auctions my-lg-2">
+    <div class="container title d-flex flex-column justify-content-between align-items-center flex-lg-row my-5">
         <h2 class="text-white">Live Auctions</h2>
         <a href="#" class="btn btn-bg-light text-white px-4 py-2 me-3">
             <i class="fa-solid fa-rocket"></i>
@@ -282,8 +284,8 @@
 <!-- End Auctions -->
 <!-- Collections -->
 <section class="collections my-5 py-5">
-    <div class="container title d-flex justify-content-between align-items-center my-5">
-        <h2 class="text-white">Popular Collections</h2>
+    <div class="container title d-flex flex-column justify-content-between align-items-center flex-lg-row my-5">
+        <h2 class="text-white text-center text-lg-start">Popular Collections</h2>
         <a href="#" class="btn btn-bg-light text-white px-4 py-2 me-3">
             <i class="fa-solid fa-rocket"></i>
             Explore All
