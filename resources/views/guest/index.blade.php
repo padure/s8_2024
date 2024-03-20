@@ -4,13 +4,15 @@
 <!-- Header -->
 <header>
     <div class="container d-flex align-items-center bg-site-image">
-        <div class="col-6">
-            <h1 class="text-white mb-5">
+        <div class="col-lg-6">
+            <h1 class="text-center text-lg-start text-white mb-5 header-title">
                 Discover, collect, and sell extraordinary <br>
                 <span class="text-site-gradient">NFTs</span>
             </h1>
-            <p class="text-light mb-5">NFT is the world's first and largest NFT marketplace</p>
-            <div class="buttons">
+            <p class="text-light mb-5 text-center text-lg-start header-description">
+                NFT is the world's first and largest NFT marketplace
+            </p>
+            <div class="d-flex justify-content-center justify-content-lg-start">
                 <a href="#" class="btn btn-bg-light text-white px-4 py-2 me-3">
                     <i class="fa-solid fa-rocket"></i>
                     Explore
@@ -25,8 +27,8 @@
 </header>
 <!-- End Header -->
 <!-- Auctions -->
-<section class="auctions my-5">
-    <div class="container title d-flex justify-content-between align-items-center my-5">
+<section class="auctions my-lg-2">
+    <div class="container title d-flex flex-column justify-content-between align-items-center flex-lg-row my-5">
         <h2 class="text-white">Live Auctions</h2>
         <a href="#" class="btn btn-bg-light text-white px-4 py-2 me-3">
             <i class="fa-solid fa-rocket"></i>
@@ -282,8 +284,8 @@
 <!-- End Auctions -->
 <!-- Collections -->
 <section class="collections my-5 py-5">
-    <div class="container title d-flex justify-content-between align-items-center my-5">
-        <h2 class="text-white">Popular Collections</h2>
+    <div class="container title d-flex flex-column justify-content-between align-items-center flex-lg-row my-5">
+        <h2 class="text-white text-center text-lg-start">Popular Collections</h2>
         <a href="#" class="btn btn-bg-light text-white px-4 py-2 me-3">
             <i class="fa-solid fa-rocket"></i>
             Explore All
@@ -291,81 +293,32 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
+            @foreach($collections as $collection)
+                <div class="col-md-4">
                 <div class="card bg-card radius">
                     <div class="card-body">
-                        <div class="d-flex flex-wrap">
-                            <img src="{{ asset('assets/images/section_2/card-2.png') }}" class="w-50 p-2 radius" alt="Metaverse">
-                            <img src="{{ asset('assets/images/section_2/card-2.png') }}" class="w-50 p-2 radius" alt="Metaverse">
-                            <img src="{{ asset('assets/images/section_2/card-2.png') }}" class="w-50 p-2 radius" alt="Metaverse">
-                            <img src="{{ asset('assets/images/section_2/card-2.png') }}" class="w-50 p-2 radius" alt="Metaverse">
+                        <div class="d-flex flex-wrap images">
+                            @foreach($collection->images()->limit(4)->get() as $image)
+                                <img src="{{ asset(env('UPLOADS_IMAGE'). "/" . $image->name) }}" class="w-50 p-2 radius" alt="Metaverse">
+                            @endforeach
                         </div>
                         <div class="d-flex justify-content-between mt-3">
                             <div class="d-flex author flex-row align-items-center">
                                 <img src="{{ asset('assets/images/section_2/Avatar.png') }}" alt="Avatar" class="avatar me-3">
                                 <div class="d-flex flex-column justify-content-center">
-                                    <h5 class="text-white mb-0">Metaverse</h5>
-                                    <p class="text-secondary mb-0">Created by <span class="text-white">John Doe</span></p>
+                                    <h5 class="text-white mb-0">{{ $collection->name }}</h5>
+                                    <p class="text-secondary mb-0">Created by <span class="text-white">{{ $collection->user()->get()->first()->name }}</span></p>
                                 </div>
                             </div>
                             <div class="d-flex flex-column justify-content-center">
-                                <i class="fa-regular fa-heart text-white text-center"></i>
-                                <span class="text-white">145</span>
+                                <i class="fa-regular fa-heart text-white text-center like-button" data-collection-id="{{ $collection->id }}"></i>
+                                <span class="text-white text-center like" >{{ $collection->likes }}</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card bg-card radius">
-                    <div class="card-body">
-                        <div class="d-flex flex-wrap">
-                            <img src="{{ asset('assets/images/section_2/card-2.png') }}" class="w-50 p-2 radius" alt="Metaverse">
-                            <img src="{{ asset('assets/images/section_2/card-2.png') }}" class="w-50 p-2 radius" alt="Metaverse">
-                            <img src="{{ asset('assets/images/section_2/card-2.png') }}" class="w-50 p-2 radius" alt="Metaverse">
-                            <img src="{{ asset('assets/images/section_2/card-2.png') }}" class="w-50 p-2 radius" alt="Metaverse">
-                        </div>
-                        <div class="d-flex justify-content-between mt-3">
-                            <div class="d-flex author flex-row align-items-center">
-                                <img src="{{ asset('assets/images/section_2/Avatar.png') }}" alt="Avatar" class="avatar me-3">
-                                <div class="d-flex flex-column justify-content-center">
-                                    <h5 class="text-white mb-0">Metaverse</h5>
-                                    <p class="text-secondary mb-0">Created by <span class="text-white">John Doe</span></p>
-                                </div>
-                            </div>
-                            <div class="d-flex flex-column justify-content-center">
-                                <i class="fa-regular fa-heart text-white text-center"></i>
-                                <span class="text-white">145</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card bg-card radius">
-                    <div class="card-body">
-                        <div class="d-flex flex-wrap">
-                            <img src="{{ asset('assets/images/section_2/card-2.png') }}" class="w-50 p-2 radius" alt="Metaverse">
-                            <img src="{{ asset('assets/images/section_2/card-2.png') }}" class="w-50 p-2 radius" alt="Metaverse">
-                            <img src="{{ asset('assets/images/section_2/card-2.png') }}" class="w-50 p-2 radius" alt="Metaverse">
-                            <img src="{{ asset('assets/images/section_2/card-2.png') }}" class="w-50 p-2 radius" alt="Metaverse">
-                        </div>
-                        <div class="d-flex justify-content-between mt-3">
-                            <div class="d-flex author flex-row align-items-center">
-                                <img src="{{ asset('assets/images/section_2/Avatar.png') }}" alt="Avatar" class="avatar me-3">
-                                <div class="d-flex flex-column justify-content-center">
-                                    <h5 class="text-white mb-0">Metaverse</h5>
-                                    <p class="text-secondary mb-0">Created by <span class="text-white">John Doe</span></p>
-                                </div>
-                            </div>
-                            <div class="d-flex flex-column justify-content-center">
-                                <i class="fa-regular fa-heart text-white text-center"></i>
-                                <span class="text-white">145</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>

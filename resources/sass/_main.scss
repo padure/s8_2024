@@ -26,11 +26,37 @@
     background-position: right;
 }
 .title h2{
-    font-size: 64px;
+    font-size: 55px;
 }
 .bg-card{
     background: rgba(53, 57, 65, 0.41)!important;
 }
 .icons .fa-heart{
     cursor: pointer;
+}
+.header-title{
+    font-size: 48px;
+}
+.header-description{
+    font-size: 20px;
+}
+.swiper-pagination{
+    background-color: white;
+
+}
+.like-button{
+    cursor: pointer;
+}
+.collections .images img{
+    height: 25dvh;
+    object-fit: cover;
+}
+@media screen and (max-width: 992px) {
+    .bg-site-image{
+        background-size: 100%;
+        background-position: top;
+    }
+    .title h2{
+        font-size: 40px;
+    }
 }
